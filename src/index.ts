@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosError } from 'axios';
 
 import { ISendSms } from './interface/global.interface';
 
-class SmsService {
+class SmsMobizen {
   private apiEnvironment: ISendSms;
 
   constructor(apiKey: string, apiServer: string, apiVersion: string, format: string) {
@@ -38,13 +38,13 @@ class SmsService {
       } catch (e) {
         const error = e as AxiosError;
         return error.response?.status === 0
-          ? 'A requisição foi cancelada devido a um timeout.'
-          : `Erro: ${error.response?.statusText || 'Desconhecido'}`;
+          ? 'The request was cancelled due to a timeout.'
+          : `Erro:r ${error.response?.statusText || 'Unknown'}`;
       }
     });
 
-    return Promise.all(sendRequests).then(results => results.map(result => result || 'Erro desconhecido'));
+    return Promise.all(sendRequests).then(results => results.map(result => result || 'Unknown error'));
   }
 }
 
-export default SmsService;
+export default SmsMobizen;
