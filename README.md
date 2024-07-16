@@ -7,7 +7,13 @@ Um pacote npm para facilitar o envio de mensagens SMS utilizando o serviço da M
 Para instalar e utilizar este pacote em seu projeto, você pode executar o seguinte comando npm:
 
 ```bash
-npm install nome-do-seu-pacote
+npm install sms-mobizen
+```
+
+Ou você pode preferir o Yarn:
+
+```bash
+yarn add sms-mobizen
 ```
 
 ## Uso
