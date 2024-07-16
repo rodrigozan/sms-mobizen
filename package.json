@@ -1,0 +1,17 @@
+{
+  "name": "sms-mobizen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^1.7.2"
+  }
+}
