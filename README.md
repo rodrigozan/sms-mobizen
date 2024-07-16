@@ -3,6 +3,8 @@
 
 An npm package to simplify sending SMS messages using the Mobizen service.
 
+To use this package, you nedd a Mobizen API KEY. You get a [Mobizen API KEY in this link](https://mobizon.com.br/).
+
 ## Installation
 
 To install and use this package in your project, you can run the following npm command:
@@ -29,7 +31,7 @@ Before using the service, make sure to properly configure environment variables 
    You can set environment variables directly in the terminal before starting your application. For example, on Linux/MacOS:
 
    ```bash
-   export MOBIZEN_API_KEY='YOUR_MOBIZEN_TOKEN'
+   export MOBIZEN_API_KEY='YOUR_MOBIZEN_API_KEY'
    export MOBIZEN_API_SERVER='https://api.mobizon.com.br'
    export MOBIZEN_API_VERSION='v1'
    export MOBIZEN_API_FORMAT='json'
@@ -38,7 +40,7 @@ Before using the service, make sure to properly configure environment variables 
    On Windows, the command is similar:
 
    ```bash
-   set MOBIZEN_API_KEY=YOUR_MOBIZEN_TOKEN
+   set MOBIZEN_API_KEY=YOUR_MOBIZEN_API_KEY
    set MOBIZEN_API_SERVER=https://api.mobizon.com.br
    set MOBIZEN_API_VERSION=v1
    set MOBIZEN_API_FORMAT=json
@@ -62,7 +64,7 @@ Before using the service, make sure to properly configure environment variables 
    You can create a `.env` file at the root of your project to store your environment variables:
 
    ```plaintext
-   MOBIZEN_API_KEY=YOUR_MOBIZEN_TOKEN
+   MOBIZEN_API_KEY=YOUR_MOBIZEN_API_KEY
    MOBIZEN_API_SERVER=https://api.mobizon.com.br
    MOBIZEN_API_VERSION=v1
    MOBIZEN_API_FORMAT=json
@@ -100,7 +102,7 @@ If you prefer to configure variables directly in the code, you can create a conf
 ```typescript
 // config.ts
 export const config = {
-    apiKey: 'YOUR_MOBIZEN_TOKEN',
+    apiKey: 'YOUR_MOBIZEN_API_KEY',
     apiServer: 'https://api.mobizon.com.br',
     apiVersion: 'v1',
     format: 'json',

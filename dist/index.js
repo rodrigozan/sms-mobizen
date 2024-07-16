@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
-class SmsService {
+class SmsMobizen {
     constructor(apiKey, apiServer, apiVersion, format) {
         this.apiEnvironment = {
             apiKey,
@@ -47,12 +47,12 @@ class SmsService {
                 catch (e) {
                     const error = e;
                     return ((_a = error.response) === null || _a === void 0 ? void 0 : _a.status) === 0
-                        ? 'A requisição foi cancelada devido a um timeout.'
-                        : `Erro: ${((_b = error.response) === null || _b === void 0 ? void 0 : _b.statusText) || 'Desconhecido'}`;
+                        ? 'The request was cancelled due to a timeout.'
+                        : `Erro:r ${((_b = error.response) === null || _b === void 0 ? void 0 : _b.statusText) || 'Unknown'}`;
                 }
             }));
-            return Promise.all(sendRequests).then(results => results.map(result => result || 'Erro desconhecido'));
+            return Promise.all(sendRequests).then(results => results.map(result => result || 'Unknown error'));
         });
     }
 }
-exports.default = SmsService;
+exports.default = SmsMobizen;
