@@ -1,7 +1,5 @@
-Aqui está a tradução do seu README.md para inglês, junto com algumas sugestões de melhorias:
-
-```markdown
 # SMS Mobizen
+
 
 An npm package to simplify sending SMS messages using the Mobizen service.
 
@@ -21,13 +19,13 @@ yarn add sms-mobizen
 
 ## Usage
 
-To use the SMS service, import and instantiate the `SmsService` class, passing the necessary configurations:
 
-Certainly! Here's how you can configure environment variables or configuration constants in your project for SMS Mobizen:
+Before using the service, make sure to properly configure environment variables or configuration constants in your project as needed.
 
 ### Configuration using Environment Variables
 
 1. **Environment Variables in the Terminal**:
+
    You can set environment variables directly in the terminal before starting your application. For example, on Linux/MacOS:
 
    ```bash
@@ -54,12 +52,13 @@ Certainly! Here's how you can configure environment variables or configuration c
    const apiVersion = process.env.MOBIZEN_API_VERSION;
    const format = process.env.MOBIZEN_API_FORMAT;
 
-   const smsService = new SmsService(apiKey, apiServer, apiVersion, format);
+   const smsMobizen = new smsMobizen(apiKey, apiServer, apiVersion, format);
 
-   // Now you can use smsService.sendSms(...) to send SMS
+   // Now you can use smsMobizen.sendSms(...) to send SMS
    ```
 
 2. **Configuration in the `.env` file**:
+
    You can create a `.env` file at the root of your project to store your environment variables:
 
    ```plaintext
@@ -71,8 +70,16 @@ Certainly! Here's how you can configure environment variables or configuration c
 
    Then, you can use a library like `dotenv` to load these environment variables:
 
+  Install dotenv 
+  
+  ```bash
+  npm install dotenv
+  ```
+
+Import dotenv and instantiate the module
+
    ```typescript
-   // Install dotenv: npm install dotenv
+  
    import * as dotenv from 'dotenv';
    dotenv.config();
 
@@ -81,9 +88,9 @@ Certainly! Here's how you can configure environment variables or configuration c
    const apiVersion = process.env.MOBIZEN_API_VERSION;
    const format = process.env.MOBIZEN_API_FORMAT;
 
-   const smsService = new SmsService(apiKey, apiServer, apiVersion, format);
+   const smsMobizen = new smsMobizen(apiKey, apiServer, apiVersion, format);
 
-   // Now you can use smsService.sendSms(...) to send SMS
+   // Now you can use smsMobizen.sendSms(...) to send SMS
    ```
 
 ### Configuration using Constants in the Code
@@ -99,15 +106,26 @@ export const config = {
     format: 'json',
 };
 
-// In your service or where you need to configure SMS
+
+```
+
+In your service or where you need to configure SMS
+
+```typescript
+import SmsMobizen from 'sms-mobizen';
+
 import { config } from './config';
 
-const smsService = new SmsService(config.apiKey, config.apiServer, config.apiVersion, config.format);
+const smsMobizen = new SmsMobizen(config.apiKey, config.apiServer, config.apiVersion, config.format);
 
-// Now you can use smsService.sendSms(...) to send SMS
+// Now you can use smsMobizen.sendSms(...) to send SMS
 ```
 
 ### Sending SMS
+
+
+To use the SMS service, import and instantiate the `SmsMobizen` class, passing the necessary configurations:
+
 
 ```typescript
 import SmsMobizen from 'sms-mobizen';
@@ -172,10 +190,6 @@ sendSms();
 
 Make sure to replace `apiKey`, `apiServer`, `apiVersion`, and `format` with your specific Mobizen values.
 
-## Configuration
-
-Before using the service, make sure to properly configure environment variables or configuration constants in your project as needed.
-
 ## Contributions
 
 Contributions are welcome! If you find any issues or want to improve this package, feel free to open an issue or submit a pull request on GitHub.
@@ -187,13 +201,5 @@ This project is licensed under the [MIT License](https://github.com/seu-usuario/
 ## Author
 
 Developed by [Rodrigo Zan](https://github.com/rodrigozan)
-```
 
-### Sugestões de Melhorias:
-
-
-
-3. **Seção de Configuração mais detalhada**: Expanda a seção de configuração para incluir exemplos de como configurar as variáveis de ambiente ou constantes de configuração no projeto.
-
-5. **Badges**: Considere adicionar badges para o status do build, cobertura de testes, ou outras métricas relevantes para fornecer uma visão rápida do estado do seu projeto aos potenciais usuários.
 
