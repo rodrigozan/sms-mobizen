@@ -1,6 +1,17 @@
 {
   "name": "sms-mobizen",
-  "version": "1.0.0",
+  "author": {
+    "name": "Rodrigo Zan",
+    "email": "rodrigo.zandonadi.dev@gmail.com",
+    "url": "https://github.com/rodrigozan"
+  },
+  "homepage": "https://github.com/rodrigozan/sms-mobizen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigozan/sms-mobizen.git"
+  },
+  "version": "1.0.1",
+  "description": "Pacote para envio de SMS usando a API da Mobizen, desenvolvido em Angular e TypeScript.",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -13,5 +24,27 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "axios": "^1.7.2"
-  }
+  },
+  "keywords": [
+    "sms",
+    "mobizen",
+    "envio de sms",
+    "serviço de sms",
+    "angular",
+    "typescript",
+    "react",
+    "vue",
+    "nodejs",
+    "node.js",
+    "node js",
+    "javascript",
+    "send sms",
+    "send sms ionic",
+    "send sms agular",
+    "send sms react",
+    "send sms react native",
+    "send sms vue",
+    "send sms node",
+    "send sms nodejs"
+  ]
 }
