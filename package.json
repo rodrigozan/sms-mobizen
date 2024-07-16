@@ -11,7 +11,7 @@
     "url": "git+https://github.com/rodrigozan/sms-mobizen.git"
   },
   "version": "1.0.2",
-  "description": "Pacote para envio de SMS usando a API da Mobizen, desenvolvido em Angular e TypeScript.",
+  "description": "Package for sending SMS using the Mobizen API, developed in Angular and TypeScript",
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
@@ -28,8 +28,6 @@
   "keywords": [
     "sms",
     "mobizen",
-    "envio de sms",
-    "serviço de sms",
     "angular",
     "typescript",
     "react",
